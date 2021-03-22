@@ -23,17 +23,18 @@ if(btn!=undefined){
             btn.click();
         }
     },250);
-}
-
+}else{
     let links = document.links;
     let nextYandexPage = true;
     for(let i=0; i<links.length; i++){
         let link = links[i];
         link.removeAttribute('target')
-        if(link.href.indexOf("soundtimes.ru")!=-1){
+        if(link.href.indexOf("xn----7sbab5aqcbiddtdj1e1g.xn--p1ai")!=-1){
             nextYandexPage = false;
             link.click(); // Кликаем по ссылке
             break; // Прерываем цикл
         }
     }
     if(nextYandexPage) document.getElementsByClassName("pager__item_kind_next")[0].click();
+
+}
